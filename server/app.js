@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-app.set('view engine', 'html');
+app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
