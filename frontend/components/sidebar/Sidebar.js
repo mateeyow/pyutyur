@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import {
   MdDashboard,
   MdAccountBalanceWallet,
@@ -18,36 +17,14 @@ const Sidebar = () => (
     </div>
     <nav>
       <ul>
-        <NavItem>
-          <Link href='/'>
-            <a className='font-semibold text-textGray text-base flex flex-row items-center py-2 px-8'>
-              <MdDashboard size='32' className='text-primary' />
-              <span className='pl-4'>Dashboard</span>
-            </a>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link href='/expenses'>
-            <a className='font-semibold text-textGray text-base flex flex-row items-center py-2 px-8'>
-              <FaMoneyBill size='32' className='text-primary' />
-              <span className='pl-4'>Expenses</span>
-            </a>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link href='/accounts'>
-            <a className='font-semibold text-textGray text-base flex flex-row items-center py-2 px-8'>
-              <MdAccountBalanceWallet size='32' className='text-primary' />
-              <span className='pl-4'>Accounts</span>
-            </a>
-          </Link>
-        </NavItem>
-        <NavItem className='absolute bottom-0'>
-          <a className='font-semibold text-textGray text-base flex flex-row items-center py-2 px-8'>
-            <MdPowerSettingsNew size='32' className='text-primary' />
-            <span className='pl-4'>Log Out</span>
-          </a>
-        </NavItem>
+        <NavItem icon={MdDashboard} text='Dashboard' url='/' />
+        <NavItem icon={FaMoneyBill} text='Expenses' url='/expenses' />
+        <NavItem
+          icon={MdAccountBalanceWallet}
+          text='Accounts'
+          url='/accounts'
+        />
+        <NavItem icon={MdPowerSettingsNew} text='Log Out' url='/logout' />
       </ul>
     </nav>
   </aside>
