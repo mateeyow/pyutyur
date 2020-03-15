@@ -3,6 +3,8 @@
   --color-lineGray: #efefef;
   --color-primary-hover: #00cc89;
   --color-textGray: #4f4f4f;
+  --color-borderGray: #bdbdbd;
+  --color-lightGray: #828282;
 }
 
 @tailwind base;

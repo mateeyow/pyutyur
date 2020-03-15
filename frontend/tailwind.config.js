@@ -11,6 +11,8 @@ module.exports = {
       primaryHover: 'var(--color-primary-hover)',
       lineGray: 'var(--color-lineGray)',
       textGray: 'var(--color-textGray)',
+      borderGray: 'var(--color-borderGray)',
+      lightGray: 'var(--color-lightGray)',
       anchor: '#2d9cdb',
     },
     minHeight: {
@@ -37,5 +39,5 @@ module.exports = {
     borderColor: ['responsive', 'hover', 'focus', 'active'],
     transitionProperty: ['responsive', 'hover', 'focus'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/custom-forms')],
 };

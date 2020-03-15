@@ -7,6 +7,7 @@ class CustomDocument extends Document {
         <Head />
         <body className='bg-gray-100 font-body h-screen'>
           <Main />
+          <div id='portals'></div>
           <NextScript />
         </body>
       </Html>
