@@ -31,7 +31,7 @@ const ModalContainer = styled.div`
 
 const Modal = ({ children, title, onClose = () => {} }) => {
   const [modalContainer, setModalContainer] = useState();
-  if (!process.browser) {
+  if (!process.browser && process.env.NODE_ENV !== 'test') {
     return null;
   }
 
@@ -50,10 +50,17 @@ const Modal = ({ children, title, onClose = () => {} }) => {
     ? createPortal(
         <Container>
           <Overlay onClick={onClose} />
-          <ModalContainer className='py-6 px-8 rounded'>
+          <ModalContainer
+            className='py-6 px-8 rounded'
+            data-testid='modal container'
+          >
             <div className='flex flex-row items-start'>
               <TitleText>{title}</TitleText>
-              <button className='block ml-auto' onClick={onClose}>
+              <button
+                className='block ml-auto'
+                onClick={onClose}
+                data-testid='modal close button'
+              >
                 <MdClose className='text-textGray' />
               </button>
             </div>

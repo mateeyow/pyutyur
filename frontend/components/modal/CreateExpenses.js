@@ -11,7 +11,7 @@ const CreateExpenses = ({ isOpen, onClose }) => {
   }
 
   return (
-    <Modal title='Some title' onClose={() => onClose(false)}>
+    <Modal title='New Expense' onClose={() => onClose(false)}>
       <div className='pt-2'>
         <label className='block mt-4'>
           <span>Amount</span>
@@ -49,6 +49,7 @@ const CreateExpenses = ({ isOpen, onClose }) => {
           <button
             className='uppercase underline text-anchor mr-4 text-sm'
             onClick={() => onClose(false)}
+            data-testid='create expenses cancel button'
           >
             Cancel
           </button>
@@ -58,4 +59,5 @@ const CreateExpenses = ({ isOpen, onClose }) => {
     </Modal>
   );
 };
+
 export default CreateExpenses;
